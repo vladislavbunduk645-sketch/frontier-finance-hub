@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontier Finance Hub — Профессиональный Дашборд</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="finance-theme">
+
+    <header class="dashboard-header">
+        <div class="container">
+            <h1>Frontier <span>Finance</span> Hub</h1>
+            <div class="status-bar">
+                <span class="live-indicator">LIVE</span>
+                <span id="current-time"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="container">
+            <div class="dashboard-grid">
+                
+                <div class="main-chart-box">
+                    <div class="widget-header">
+                        <h3>Интерактивный График Активов</h3>
+                    </div>
+                    <div id="tradingview_advanced" class="tv-widget"></div>
+                </div>
+
+                <aside class="side-panel">
+                    
+                    <div class="analysis-box">
+                        <div class="widget-header">
+                            <h3>Сила Рынка (1ч)</h3>
+                        </div>
+                        <div id="tv-analysis-container" class="tv-widget-sm"></div>
+                    </div>
+
+                    <div class="news-box">
+                        <div class="widget-header">
+                            <h3>Лента Новостей</h3>
+                        </div>
+                        <div id="tv-news-container" class="tv-widget-md"></div>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
