@@ -64,3 +64,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById('tv-news-container').appendChild(newsScript);
 });
+// 5. Виджет Скринера (Тренды и объемы)
+    const screenerContainer = document.getElementById('tradingview-screener-container');
+    if (screenerContainer) {
+        const screenerScript = document.createElement('script');
+        screenerScript.src = "https://s3.tradingview.com/external-embedding/embed-widget-screener.js";
+        screenerScript.async = true;
+        screenerScript.innerHTML = JSON.stringify({
+            "width": "100%",
+            "height": 500,
+            "defaultColumn": "overview",
+            "screener_type": "crypto_mkt",
+            "displayCurrency": "USD",
+            "colorTheme": "dark",
+            "locale": "ru"
+        });
+        screenerContainer.appendChild(screenerScript);
+    }
